@@ -96,6 +96,18 @@ Setup Display resolution
 - create a script called external_monitor_resolution.sh in the directory /etc/profile.d/. using sudo vim /etc/profile.d/external_monitor_resol.sh.
 - Paste in the shell command from step 5 and 6, then save.
 
+Headless Setup
+==================
+#### Disable GUI
+- sudo systemctl set-default multi-user
+- gnome-session-quit
+#### Enable GUI
+- sudo systemctl set-default graphical
+- or sudo systemctl start gdm3
+
+
+
+
 
 
 
