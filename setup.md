@@ -72,5 +72,29 @@ Setup static ip
          addresses: [8.8.8.8, 1.1.1.1]
 ````
 - sudo netplan apply
+
+Setup Display resolution
+===========================
+- Open a Terminal by CTRL+ALT+T
+- Type xrandr and ENTER
+- Note the display name usually VGA-1 or HDMI-1 or DP-1
+- Type cvt 1920 1080 (to get the --newmode args for the next step) and ENTER
+- Type sudo xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync and ENTER
+- Type sudo xrandr --addmode VGA-1 "1920x1080_60.00" and ENTER (replace VGA-1 with your display type (step 3) like HDMI-1 or DP-1)
+- Now close the terminal and go to Settings >> Display settings and change it to 1920x1080
+
+### persist the resolution when restart.
+#### for integrated graphic (WITHOUT SUDO)
+- goto your terminal and type vim ~/.profile ENTER
+- Paste in the shell command from step 5 and 6, then save.
+#### For external displays (WITHOUT SUDO)
+- create a script called external_monitor_resolution.sh in the directory /etc/profile.d/. using sudo vim /etc/profile.d/external_monitor_resol.sh.
+- Paste in the shell command from step 5 and 6, then save.
+
+
+
+
+
+
          
           
