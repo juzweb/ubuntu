@@ -4,7 +4,10 @@ Setup SSH
 - sudo apt-get install openssh-server
 - sudo systemctl status sshd
 - netstat -tulpn | grep 22
+## refer to setup firewall for ssh
 - setup firewall for ssh
+### check ssh service
+- sudo systemctl list-unit-files | grep enabled | grep ssh
 
 Setup SSH firewall
 ======================
