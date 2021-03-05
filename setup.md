@@ -1,5 +1,6 @@
 Setup SSH
 ==========
+- https://devconnected.com/how-to-install-and-enable-ssh-server-on-ubuntu-20-04/
 - sudo apt-get update
 - sudo apt-get install openssh-server
 - sudo systemctl status sshd
