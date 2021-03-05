@@ -4,6 +4,14 @@ Setup SSH
 - sudo apt-get install openssh-server
 - sudo systemctl status sshd
 - netstat -tulpn | grep 22
+- setup firewall for ssh
+
+Setup SSH firewall
+======================
+# accept ssh port
+- iptables -A INPUT -i eth0 -p tcp --dport 22 -j ACCEPT
+# reject anything else
+- iptables -A INPUT -j DROP
 
 Firewall Command
 ====================
@@ -48,3 +56,18 @@ iptables -A OUTPUT -p tcp -s $SERVER_IP -d 0/0 --sport 22 --dport 513:65535 -m s
 # make sure nothing comes or goes out of this box
 iptables -A INPUT -j DROP
 iptables -A OUTPUT -j DROP
+
+Setup static ip
+================
+netplan is the tool
+backup original file before edit
+ - sudo cp /etc/netplan/00-installer-config.yaml /etc/netplan/00-installer-config.yaml.bak
+then modify the file such as 
+''
+  dhcp4: no
+      addresses:
+        - 192.168.121.199/24
+      gateway4: 192.168.121.1
+      nameservers:
+          addresses: [8.8.8.8, 1.1.1.1]
+''          
