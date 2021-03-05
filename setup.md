@@ -63,10 +63,10 @@ netplan is the tool
 backup original file before edit
  - sudo cp /etc/netplan/00-installer-config.yaml /etc/netplan/00-installer-config.yaml.bak
 then modify the file such as 
->  dhcp4: no
->      addresses:
->        - 192.168.121.199/24
->      gateway4: 192.168.121.1
->      nameservers:
->          addresses: [8.8.8.8, 1.1.1.1]
+    dhcp4: no
+      addresses:
+       - 192.168.121.199/24
+      gateway4: 192.168.121.1
+      nameservers:
+      addresses: [8.8.8.8, 1.1.1.1]
           
