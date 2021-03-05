@@ -18,6 +18,7 @@ Setup SSH firewall
 
 Firewall Command
 ====================
+https://sites.google.com/site/manjumore/iptables
 ### To output all of the active iptables rules in a table,
 - sudo iptables -L --line-numbers
 ### look at the INPUT chain
