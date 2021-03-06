@@ -105,6 +105,12 @@ Headless Setup
 - sudo systemctl set-default graphical
 - or sudo systemctl start gdm3
 
+Change Vim colorschemes
+==========================
+- mkdir ~/.vim
+- git clone <https://github.com/flazz/vim-colorschemes.git> ~/.vim
+- echo 'colorscheme desert' >> ~/.vimrc
+- :colorscheme + space + tab
 
 
 
