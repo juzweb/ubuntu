@@ -1,0 +1,35 @@
+**************************
+** Multipass Cheatsheet **
+**************************
+
+Launch an instance using default current Ubuntu LTS
+$ multipass launch --name ubuntu-lts
+
+Run commands in that instance and exit when done
+$ multipass exec <name> -- lsb_release -a
+
+Enter shell of the instance
+$ multipass shell <name>
+
+List instances
+$ multipass list
+
+Stop and start instances
+$ multipass start <name> <another-name>
+$ multipass stop <name>
+
+Delete and purge instances
+$ multipass delete <name>
+$ multipass purge
+
+Get instance information
+$ multipass info <name>
+
+Find alternate images to launch with Multipass (apart from default LTS)
+$ multipass find
+
+Get help
+$ multipass help
+
+Reference
+https://multipass.run
